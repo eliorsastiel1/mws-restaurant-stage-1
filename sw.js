@@ -1,5 +1,5 @@
 // Setting up storage of data in Cache memory for offline use
-var CACHE_VERSION = 'restaurant-reviews';
+var CACHE_VERSION = 'v1';
 //Adding default files to store in cache
 var CACHE_FILES = [
 	'/',
@@ -23,6 +23,7 @@ var CACHE_FILES = [
 ];
 //Installing Service Worker to store data
 self.addEventListener('install', function (event) {
+	console.log("install");
 	event.waitUntil(
 		caches.open(CACHE_VERSION).then(function (cache) {
 			return cache.addAll(CACHE_FILES);
@@ -31,6 +32,7 @@ self.addEventListener('install', function (event) {
 });
 //Fetching data from memory
 self.addEventListener('fetch', function (event) {
+	console.log("fetch");
 	event.respondWith(caches.match(event.request).then(function (response) {
 		if (response !== undefined) {
 			return response;
@@ -47,6 +49,7 @@ self.addEventListener('fetch', function (event) {
 });
 //Activating the Service Worker
 self.addEventListener('activate', function (event) {
+	console.log("activate");
 	event.waitUntil(
 		caches.keys().then(function (keys) {
 			return Promise.all(keys.map(function (key, i) {
