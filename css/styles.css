@@ -141,7 +141,7 @@ li {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 80px;
+  height: 100%;
   background-color: #3397DB;
   align-items: center;
 }
@@ -169,7 +169,6 @@ li {
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
-  padding: 30px 15px 60px;
   text-align: center;
 }
 #restaurants-list li {
@@ -226,7 +225,7 @@ li {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
+  height: 70%;
   position: fixed;
   right: 0;
   top: 80px;
@@ -256,6 +255,7 @@ li {
 	width: 90%;
 }
 #restaurant-address {
+  width: 65%;
   font-size: 12pt;
   margin: 10px 0px;
 }
@@ -276,6 +276,7 @@ li {
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
   width: 50%;
+  overflow: hidden;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -288,6 +289,7 @@ li {
   padding-bottom: 1pt;
 }
 #reviews-list {
+  width: 50%;
   margin: 0;
   padding: 0;
 }
@@ -304,6 +306,9 @@ li {
 }
 #reviews-list li p {
   margin: 0 0 10px;
+}
+#restaurant-hours {
+  width: 80%;
 }
 #restaurant-hours td {
   color: #666;
