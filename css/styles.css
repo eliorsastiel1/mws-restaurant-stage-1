@@ -163,6 +163,11 @@ li {
   padding: 0 10px;
   width: 200px;
 }
+@media only screen and (max-width: 550px){
+  .filter-options select {
+    width: 70%
+  }
+}
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
@@ -216,6 +221,14 @@ li {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 550px){
+  
+  #restaurants-list li{
+    width: 50%;
+  }
+
+}
+
 /* ====================== Restaurant Details ====================== */
 .inside header {
   position: fixed;
@@ -231,6 +244,18 @@ li {
   top: 80px;
   width: 50%;
 }
+
+@media only screen and (max-width: 900px){
+  
+  .inside #map-container {
+    width: 40%;
+    height: 50%;
+  }
+
+}
+
+
+
 .inside #map {
   background-color: #ccc;
   height: 100%;
